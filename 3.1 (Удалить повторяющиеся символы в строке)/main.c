@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 #define max 101
 
 int main(void) {

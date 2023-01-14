@@ -1,4 +1,4 @@
-# Install script for directory: E:/CLionProjects/3.1
+# Install script for directory: C:/Users/Admin/Documents/GitHub/Labs-1-sem-/3.1 (Удалить повторяющиеся символы в строке)
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/CLionProjects/3.1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Admin/Documents/GitHub/Labs-1-sem-/3.1 (Удалить повторяющиеся символы в строке)/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
