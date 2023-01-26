@@ -19,46 +19,16 @@ void printing(){
 }
 
 int check(int a, int b){
-    for (int i = 0; i < N; ++i){
-        if(pole[a][i])
-            return 0;
-    }
-    for(int i = 0; i < N; ++i){
-        if(pole[i][b])
-            return 0;
-    }
-    for(int i = 1; a-i >= 0 && b-i >= 0; ++i){
-        if(pole[a - i][b - i])
-            return 0;
-    }
-    for(int i = 1; a+i < N && b + i < N; ++i){
-        if(pole[a + i][b + i])
-            return 0;
-    }
-    for(int i = 1; a+i < N && b - i >= 0; ++i){
-        if(pole[a + i][b - i])
-            return 0;
-    }
-    for(int i = 1; a-i >= 0 && b+i < N; ++i){
-        if(pole[a - i][b + i])
-            return 0;
-    }
-    if ((a - 1) >= 0 && (b - 2) >= 0 && pole[a - 1][b - 2])
-        return 0;
-    if ((a - 1) >= 0 && (b + 2) < N && pole[a - 1][b + 2])
-        return 0;
-    if ((a + 1) < N && (b - 2) >= 0 && pole[a + 1][b - 2])
-        return 0;
-    if ((a + 1) < N && (b + 2) < N && pole[a + 1][b + 2])
-        return 0;
-    if ((a - 2) >= 0 && (b - 1) >= 0 && pole[a - 2][b - 1])
-        return 0;
-    if ((a - 2) >= 0 && (b + 1) < N && pole[a - 2][b + 1])
-        return 0;
-    if ((a + 2) < N && (b - 1) >= 0 && pole[a + 2][b - 1])
-        return 0;
-    if ((a + 2) < N && (b + 1) < N && pole[a + 2][b + 1])
-        return 0;
+    if (pole[a][b]) return 0;
+	if (a + 1 > N || pole[a + 1][b]) return 0;
+	if (a - 1 < 0 || pole[a - 1][b]) return 0;
+	if (b + 1 > N ||pole[a][b + 1]) return 0;
+	if (b - 1 < 0 ||pole[a][b - 1]) return 0;
+	if (a + 1 > N || b + 1 > N || pole[a + 1][b + 1]) return 0;
+	if (a - 1 < 0 || b - 1 < 0 || pole[a - 1][b - 1]) return 0;
+	if (a - 1 < 0 || b + 1 > N || pole[a - 1][b + 1]) return 0;
+	if (a + 1 > N || b - 1 < 0 || pole[a + 1][b - 1]) return 0;
+	
     return 1;
 }
 
